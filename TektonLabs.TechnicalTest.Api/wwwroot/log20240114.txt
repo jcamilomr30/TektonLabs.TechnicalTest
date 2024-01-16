@@ -1,0 +1,356 @@
+2024-01-14 15:02:29.527 -05:00 [ERR] de14adb1-b386-429d-97e9-69f2ed2336bc: Unknown error
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Unknown error
+ ---> System.Net.Http.HttpRequestException: Unknown error
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 96
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:02:29.643 -05:00 [INF] Time: 2521 ms
+2024-01-14 15:09:50.730 -05:00 [INF] Time: 38 ms
+2024-01-14 15:09:54.068 -05:00 [INF] Time: 37 ms
+2024-01-14 15:09:54.588 -05:00 [INF] Time: 125 ms
+2024-01-14 15:10:03.861 -05:00 [INF] Time: 1985 ms
+2024-01-14 15:10:29.937 -05:00 [INF] Time: 213 ms
+2024-01-14 15:10:33.319 -05:00 [ERR] fbc7afbe-33c8-4f38-8530-f85522e7deab: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:10:33.374 -05:00 [INF] Time: 172 ms
+2024-01-14 15:10:59.752 -05:00 [INF] Time: 59 ms
+2024-01-14 15:11:18.629 -05:00 [ERR] d48c6cd7-5cfe-4422-8529-8ff0e7540c08: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:11:18.757 -05:00 [INF] Time: 11695 ms
+2024-01-14 15:11:56.576 -05:00 [ERR] 7026469a-b90c-472d-85b9-3cec499acdcf: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:11:56.581 -05:00 [INF] Time: 2342 ms
+2024-01-14 15:12:14.416 -05:00 [ERR] 57d8f94f-808d-42aa-9365-994cd6871e69: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:12:14.424 -05:00 [INF] Time: 15959 ms
+2024-01-14 15:12:31.058 -05:00 [ERR] bdd5e94f-c21e-4825-98e8-1e6e71e9d57a: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:12:31.064 -05:00 [INF] Time: 14942 ms
+2024-01-14 15:13:31.067 -05:00 [INF] Time: 55 ms
+2024-01-14 15:13:55.768 -05:00 [ERR] f1beffab-121d-4d28-ac8c-9c30820960e3: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:13:55.891 -05:00 [INF] Time: 22753 ms
+2024-01-14 15:14:16.938 -05:00 [ERR] 53752000-093b-4720-92b6-a83ce261cd49: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> Newtonsoft.Json.JsonSerializationException: Error converting value "Not found" to type '<>f__AnonymousType1`2[System.Guid,System.String]'. Path '', line 1, position 11.
+ ---> System.ArgumentException: Could not cast or convert from System.String to <>f__AnonymousType1`2[System.Guid,System.String].
+   at Newtonsoft.Json.Utilities.ConvertUtils.EnsureTypeAssignable(Object value, Type initialType, Type targetType)
+   at Newtonsoft.Json.Utilities.ConvertUtils.ConvertOrCast(Object initialValue, CultureInfo culture, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   --- End of inner exception stack trace ---
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType(JsonReader reader, Object value, CultureInfo culture, JsonContract contract, Type targetType)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at Newtonsoft.Json.JsonConvert.DeserializeAnonymousType[T](String value, T anonymousTypeObject)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync(HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 82
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 69
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:14:16.945 -05:00 [INF] Time: 17376 ms
+2024-01-14 15:23:58.871 -05:00 [INF] Time: 51 ms
+2024-01-14 15:24:10.858 -05:00 [ERR] 92c63051-035d-418f-be10-ac2c72fb2b00: Value cannot be null. (Parameter 'value')
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware+HttpException: Value cannot be null. (Parameter 'value')
+ ---> System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(Object value, String parameterName)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetResponseMessageAsync[T](HttpResponseMessage response) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 73
+   at TektonLabs.TechnicalTest.Infraestructure.ApiClient.GetAsync[T](String subPath) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Services\ApiClient.cs:line 34
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetDiscount(ProductDto product) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 56
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.GetById(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 49
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Get(Int32 id) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 30
+   --- End of inner exception stack trace ---
+2024-01-14 15:24:11.118 -05:00 [INF] Time: 5563 ms
+2024-01-14 15:26:44.617 -05:00 [INF] Time: 44 ms
+2024-01-14 15:26:44.635 -05:00 [INF] Time: 64 ms
+2024-01-14 15:26:45.054 -05:00 [INF] Time: 113 ms
+2024-01-14 15:26:54.303 -05:00 [INF] Time: 2056 ms
+2024-01-14 15:27:02.338 -05:00 [INF] Time: 133 ms
+2024-01-14 15:30:01.579 -05:00 [INF] API: / Time: 37 ms
+2024-01-14 15:30:05.436 -05:00 [INF] API: / Time: 43 ms
+2024-01-14 15:30:05.785 -05:00 [INF] API: / Time: 103 ms
+2024-01-14 15:30:14.995 -05:00 [INF] API: Products/Get Time: 2174 ms
+2024-01-14 15:37:37.307 -05:00 [INF] API: Products/Get Time: 1879 ms
+2024-01-14 15:39:43.342 -05:00 [ERR] 39ffe303-2fc3-41a6-bc67-795e5395bb16: One or more validation errors occurred.
+TektonLabs.TechnicalTest.Infraestructure.Exceptions.BusinessValidationException: One or more validation errors occurred.
+   at TektonLabs.TechnicalTest.Core.Extensions.ValidatorExtensions.ValidateOrThrowValidationExceptionAsync[T](IValidator`1 instance, T dto, CancellationToken cancellation) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Extensions\ValidatorExtensions.cs:line 18
+   at TektonLabs.TechnicalTest.Core.Services.ProductService.Create(CreateProductDto ProductDto) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Core\Services\ProductService.cs:line 77
+   at TektonLabs.TechnicalTest.Api.Controllers.ProductsController.Create(CreateProductDto model) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Api\Controllers\ProductsController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at TektonLabs.TechnicalTest.Infraestructure.Exceptions.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\APPS\Oiga.Courses.TechnicalTest\TektonLabs.TechnicalTest\TektonLabs.TechnicalTest.Infraestructure\Excepcions\ErrorHandlingMiddleware.cs:line 31
+2024-01-14 15:39:43.541 -05:00 [INF] API: Products/Create Time: 1633 ms
+2024-01-14 15:39:56.865 -05:00 [INF] API: Products/Create Time: 232 ms
